@@ -36,3 +36,15 @@ border-radius: 4px;
 cursor: pointer;
 width: 100%;
 }
+ .password-input {
+    position: relative;
+  }
+
+  .password-toggle {
+    position: absolute;
+    top: 55%;
+    right: 10px;
+    transform: translateY(-50%);
+    cursor: pointer;
+  }
+  
