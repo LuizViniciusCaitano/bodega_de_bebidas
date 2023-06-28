@@ -40,3 +40,14 @@ body {
   p{
     font-size: 13px;
   }
+  .password-input {
+    position: relative;
+  }
+
+  .password-toggle {
+    position: absolute;
+    top: 55%;
+    right: 10px;
+    transform: translateY(-50%);
+    cursor: pointer;
+ 
