@@ -15,10 +15,31 @@
       <label for="username">Usuário:</label>
       <input type="text" id="username" name="username" placeholder="Digite seu usuário" required>
 
+<div class="password-input">
       <label for="password">Senha:</label>
       <input type="password" id="password" name="password" placeholder="Digite sua senha" required>
-      <p><a href="cadastro.html">Cadastre-se</a></p>
-
+       <span class="password-toggle" onclick="togglePasswordVisibility()">
+      <i id="toggle-icon" class="fas fa-eye"></i>
+  </span>
+</div>
+<p><a href="cadastro.html">Cadastre-se</a></p>
+      <script>
+  function togglePasswordVisibility() {
+    const passwordInput = document.getElementById('password');
+    const toggleIcon = document.getElementById('toggle-icon');
+    
+    if (passwordInput.type === 'password') {
+      passwordInput.type = 'text';
+      toggleIcon.classList.remove('fa-eye');
+      toggleIcon.classList.add('fa-eye-slash');
+    } else {
+      passwordInput.type = 'password';
+      toggleIcon.classList.remove('fa-eye-slash');
+      toggleIcon.classList.add('fa-eye');
+    }
+  }
+</script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
       <input type="submit" value="Login">
     </form>
   </div>
